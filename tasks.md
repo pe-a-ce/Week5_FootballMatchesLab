@@ -71,7 +71,7 @@ Each of the questions/tasks below can be answered using a `SELECT` query. When y
 9) Select the matches played in the Premier League in order of total goals scored from highest to lowest. Where there is a tie the match with more home goals should come first.
 
 ```sql
-<!-- Copy solution here -->
+<!-- SELECT * FROM matches WHERE division_code = 'E1' ORDER BY (ftag + fthg) DESC, fthg DESC; -->
 
 
 ```
