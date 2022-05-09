@@ -46,7 +46,7 @@ Each of the questions/tasks below can be answered using a `SELECT` query. When y
 6) How many different teams have played in matches recorded in a French division?
 
 ```sql
-<!-- Copy solution here -->
+<!-- SELECT COUNT(DISTINCT hometeam) FROM matches WHERE division_code = 'F1' OR division_code = 'F2'; -->
 
 
 ```
@@ -71,7 +71,7 @@ Each of the questions/tasks below can be answered using a `SELECT` query. When y
 9) Select the matches played in the Premier League in order of total goals scored from highest to lowest. Where there is a tie the match with more home goals should come first.
 
 ```sql
-<!-- SELECT * FROM matches WHERE division_code = 'E1' ORDER BY (ftag + fthg) DESC, fthg DESC; -->
+<!-- SELECT * FROM matches WHERE division_code = 'E0' ORDER BY (ftag + fthg) DESC, fthg DESC; -->
 
 
 ```
@@ -79,7 +79,8 @@ Each of the questions/tasks below can be answered using a `SELECT` query. When y
 10) In which division and which season were the most goals scored?
 
 ```sql
-<!-- Copy solution here -->
+<!-- SELECT SUM (fthg + ftag), season, division_code FROM matches GROUP BY division_code, season ORDER BY SUM DESC LIMIT 1; -->
+<--   SELECT name FROM divisions WHERE code = 'EC'-->
 
 
 ```
